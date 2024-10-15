@@ -6,6 +6,5 @@
   "imports": {
     "@types/express": "npm:@types/express@^4.17.21",
     "express": "npm:express@^4.21.1"
-  },
-  "nodeModulesDir": "auto"
+  }
 }

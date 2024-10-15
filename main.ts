@@ -1,9 +1,10 @@
-import express, {
+import express from "npm:express";
+import {
 	Application,
 	NextFunction,
 	Request,
 	Response,
-} from "npm:express";
+} from "npm:@types/express";
 
 interface IErrorObject extends Error {
 	status?: number;
@@ -45,6 +46,6 @@ app.use(
 	}
 );
 
-await app.listen(port, () => {
+app.listen(port, () => {
 	console.log(`Server is Running on Port: ${port}`);
 });
