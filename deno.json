@@ -1,7 +1,7 @@
 {
   "tasks": {
     "dev": "deno run --watch -RNE main.ts",
-    "start": "deno run --watch -RNE main.ts"
+    "start": "deno run -RNE main.ts"
   },
   "imports": {
     "@types/express": "npm:@types/express@^4.17.21",
