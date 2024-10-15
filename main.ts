@@ -1,10 +1,9 @@
-import express from "npm:express@4.21.1";
-import {
+import express, {
 	Application,
 	NextFunction,
 	Request,
 	Response,
-} from "npm:@types/express";
+} from "npm:express";
 
 interface IErrorObject extends Error {
 	status?: number;
@@ -21,7 +20,7 @@ app.get("/", (_req: Request, res: Response) => {
 	});
 });
 
-// Error handler for 404
+// Error Handler for 404
 app.use((req: Request, _res: Response, next: NextFunction) => {
 	const error: IErrorObject = new Error(
 		`Requested URL '${req.url}' Not Found!`
@@ -38,7 +37,7 @@ app.use(
 		res: Response,
 		_next: NextFunction
 	) => {
-		console.warn(error.message);
+		console.error(error.message);
 		res.status(error.status || 500).send({
 			success: false,
 			message: error.message || "Internal Server Error!",
@@ -46,6 +45,6 @@ app.use(
 	}
 );
 
-app.listen(port, () => {
+await app.listen(port, () => {
 	console.log(`Server is Running on Port: ${port}`);
 });

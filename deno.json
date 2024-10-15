@@ -1,10 +1,11 @@
 {
-	"tasks": {
-		"dev": "deno run --watch -RNE main.ts",
-		"start": "deno run --watch -RNE main.ts"
-	},
-	"imports": {
-		"@types/express": "npm:@types/express@^4.17.0",
-		"express": "npm:express@^4.21.1"
-	}
+  "tasks": {
+    "dev": "deno run --watch -RNE main.ts",
+    "start": "deno run --watch -RNE main.ts"
+  },
+  "imports": {
+    "@types/express": "npm:@types/express@^4.17.21",
+    "express": "npm:express@^4.21.1"
+  },
+  "nodeModulesDir": "auto"
 }
